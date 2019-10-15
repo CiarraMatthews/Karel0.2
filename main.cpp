@@ -21,6 +21,10 @@ int main() {
 	cin.getline(filename, 50);
 	myFile.open(filename);
 
+	if(!filename){
+		cout << "file open failed" << endl;
+	}
+
 	if (!myFile.is_open()) {
 		exit(EXIT_FAILURE);
 	}
@@ -36,11 +40,21 @@ int main() {
 	Karel karel(g1.getHeight());
 	//g1.fillGameBoard();
 	g1.printGameBoard();
+	karel.updateKarel(g1, karel.getLocation());
 	do {
-		
+		//karel.takeCommand();
 
 	} while (command != "quit();");
 
 
 	return 0;
 }
+
+
+
+/*
+look up file. eof or check Note
+//end of file
+for lab 4
+cin.fail() then cin.clear if true  
+*/

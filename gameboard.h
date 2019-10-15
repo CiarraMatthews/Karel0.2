@@ -16,6 +16,7 @@ public:
 	
 	int getHeight();
 	int getWidth();
+	vector<vector<char>> getBoard();
 private:
 	int height, width;
 	vector<vector<char>> board;

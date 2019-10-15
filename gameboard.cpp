@@ -51,3 +51,5 @@ int GameBoard::getHeight() {
 int GameBoard::getWidth() {
 	return width;
 }
+
+vector<vector<char>> GameBoard::getBoard() { return board; }
